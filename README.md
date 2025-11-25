@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # My Product-Management App
 
 A Vue 3 + TypeScript + TailwindCSS admin dashboard with sidebar, navbar, and multiple layouts for products, orders, and customers.
@@ -22,3 +23,6 @@ A Vue 3 + TypeScript + TailwindCSS admin dashboard with sidebar, navbar, and mul
 
 ```bash
 (https://github.com/Bizabishaka/Product-Management-App.git)
+=======
+
+>>>>>>> e53f377 (remainder)

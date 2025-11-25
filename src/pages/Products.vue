@@ -1,6 +1,6 @@
 <template>
   <div class="w-full p-3 sm:p-4">
-    <!-- Top Header + Add + Search -->
+ 
     <div class="flex flex-col gap-4 mb-6">
       <div
         class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
@@ -35,7 +35,7 @@
         </button>
       </div>
 
-      <!-- Search -->
+     
       <div class="relative w-full sm:w-1/2">
         <input
           type="text"
@@ -60,15 +60,15 @@
       </div>
     </div>
 
-    <!-- Loading -->
+   
     <div v-if="store.isLoading" class="p-6 bg-white rounded shadow">
       <Spinner />
     </div>
 
-    <!-- Error -->
+   
     <div v-if="store.error" class="text-red-600 p-4">{{ store.error }}</div>
 
-    <!-- Products Grid -->
+    
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
       <div
         v-for="p in displayedProducts"
@@ -96,7 +96,7 @@
           <div>Stock: {{ p.stock }}</div>
         </div>
 
-        <!-- Dropdown Menu -->
+      
         <div class="absolute top-4 right-4">
           <button
             @click="menuOpen = menuOpen === p.id ? null : p.id"

@@ -7,12 +7,12 @@
     </div>
 
     <div v-if="product" class="bg-white rounded shadow p-6 flex flex-col md:flex-row gap-6">
-      <!-- Left: Product Image -->
+     
       <div class="shrink-0 md:w-1/3">
         <img :src="product.thumbnail" alt="thumb" class="w-full h-64 object-cover rounded" />
       </div>
 
-      <!-- Right: Product Details -->
+      
       <div class="flex-1 flex flex-col gap-4">
         <h1 class="text-2xl font-bold text-primary">{{ product.title }}</h1>
 
@@ -23,12 +23,12 @@
 
         <p class="text-gray-600">{{ product.description }}</p>
 
-        <!-- Rating Chart -->
+       
         <div v-if="product.rating" class="mt-4">
           <canvas ref="ratingChart" class="w-full h-48"></canvas>
         </div>
 
-        <!-- Actions -->
+        
         <div class="flex gap-3 mt-4">
           <button @click="onDelete" class="px-4 py-2 bg-red-500 text-white rounded">Delete</button>
         </div>
@@ -66,7 +66,7 @@ export default {
         const p = await store.fetchProductById(id);
         product.value = p;
 
-        // Render Chart
+        
         if (product.value.rating && ratingChart.value) {
           new Chart(ratingChart.value, {
             type: "bar",
@@ -120,5 +120,5 @@ export default {
 </script>
 
 <style scoped>
-/* optional styling tweaks */
+
 </style>

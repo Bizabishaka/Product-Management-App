@@ -1,21 +1,21 @@
 <template>
   <div class="min-h-screen flex flex-col justify-center items-center bg-slate-50">
-    <!-- Logo -->
+    
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-bold">PlatformLogo</h1>
     </div>
 
-    <!-- Card -->
+    
     <div class="w-full max-w-md bg-white rounded-2xl shadow p-8">
-      <!-- Welcome message -->
+      
       <h2 class="text-xl font-semibold mb-2 text-center">Welcome Back!</h2>
       <p class="text-gray-600 mb-6 text-center">
         Please sign to manage your products
       </p>
 
-      <!-- Form -->
+      
       <form @submit.prevent="onSubmit" class="space-y-4">
-        <!-- Username -->
+        
         <div>
           <label class="block text-sm font-medium mb-1">Username</label>
           <input
@@ -26,7 +26,7 @@
           />
         </div>
 
-        <!-- Password -->
+       
         <div class="relative">
           <label class="block text-sm font-medium mb-1">Password</label>
           <input
@@ -36,7 +36,7 @@
             placeholder="Enter password"
             class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-1 focus:ring-blue-500 pr-10"
           />
-          <!-- Eye icon -->
+          
           <button
             type="button"
             @click="showPassword = !showPassword"
@@ -47,7 +47,7 @@
           </button>
         </div>
 
-        <!-- Remember me & Forgot password -->
+        
         <div class="flex justify-between items-center text-sm text-gray-600">
           <label class="flex items-center gap-1">
             <input type="checkbox" v-model="rememberMe" />
@@ -58,7 +58,7 @@
           </RouterLink>
         </div>
 
-        <!-- Submit -->
+       
         <button
           type="submit"
           :disabled="loading"
@@ -67,12 +67,12 @@
           {{ loading ? 'Signing in...' : 'Sign In' }}
         </button>
 
-        <!-- Error -->
+        
         <p v-if="error" class="text-red-600 text-sm mt-2">{{ error }}</p>
       </form>
     </div>
 
-    <!-- Footer -->
+  
     <footer class="mt-6 text-gray-500 text-sm">
       &copy; 2024 Zacktech
     </footer>
@@ -107,7 +107,7 @@ export default {
       loading.value = false
 
       if (res.ok) {
-        // Optional: remember me logic
+      
         if (!rememberMe.value) {
           localStorage.removeItem('token')
           localStorage.removeItem('user')
