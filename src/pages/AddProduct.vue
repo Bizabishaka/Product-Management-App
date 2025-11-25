@@ -1,25 +1,25 @@
 <template>
   <div class="p-4 sm:p-6">
 
-    <!-- PAGE HEADER -->
+    
     <h2 class="text-2xl font-semibold text-primary mb-1">Add Product</h2>
     <p class="text-gray-600 mb-4 sm:mb-6">Enter your details</p>
 
-    <!-- CARD -->
+   
     <form 
       @submit.prevent="saveProduct" 
       class="bg-white p-6 sm:p-8 rounded-2xl shadow-md space-y-6 border border-gray-100 max-w-3xl mx-auto"
     >
 
-      <!-- CARD HEADER -->
+      
       <h3 class="text-lg sm:text-xl font-semibold text-gray-800 pb-2 border-b">
         Product Information
       </h3>
 
-      <!-- RESPONSIVE GRID -->
+      
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
 
-        <!-- TITLE -->
+        
         <div>
           <label class="block text-sm font-medium mb-1">Title</label>
           <input 
@@ -29,7 +29,7 @@
           />
         </div>
 
-        <!-- CATEGORY -->
+       
         <div>
           <label class="block text-sm font-medium mb-1">Category</label>
           <input 
@@ -38,7 +38,7 @@
           />
         </div>
 
-        <!-- PRICE -->
+        
         <div>
           <label class="block text-sm font-medium mb-1">Price</label>
           <input 
@@ -48,7 +48,7 @@
           />
         </div>
 
-        <!-- STOCK -->
+        
         <div>
           <label class="block text-sm font-medium mb-1">Stock</label>
           <input 
@@ -60,7 +60,7 @@
 
       </div>
 
-      <!-- DESCRIPTION -->
+      
       <div>
         <label class="block text-sm font-medium mb-1">Description</label>
         <textarea 
@@ -70,11 +70,11 @@
         ></textarea>
       </div>
 
-      <!-- MEDIA UPLOAD -->
+      
       <div>
         <label class="block text-sm font-medium mb-1">Media</label>
 
-        <!-- Upload Box -->
+        
         <label 
           for="media"
           class="w-full cursor-pointer p-4 border-2 border-dashed rounded-xl flex flex-col items-center gap-2 hover:bg-gray-50 transition text-center"
@@ -102,7 +102,7 @@
           class="hidden"
         />
 
-        <!-- Preview -->
+      
         <div v-if="previewImage" class="mt-3 flex justify-center sm:justify-start">
           <img 
             :src="previewImage" 
@@ -112,7 +112,7 @@
         </div>
       </div>
 
-      <!-- BUTTONS -->
+      
       <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
 
         <button 
@@ -134,7 +134,7 @@
 
     </form>
 
-    <!-- SUCCESS MESSAGE -->
+    
     <p 
       v-if="message" 
       class="text-green-600 mt-4 font-medium animate-pulse text-center"

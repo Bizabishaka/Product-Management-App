@@ -8,7 +8,7 @@ const api = axios.create({
   },
 })
 
-// attach token before request
+
 api.interceptors.request.use((config) => {
   try {
     const auth = useAuthStore()
@@ -17,7 +17,7 @@ api.interceptors.request.use((config) => {
       config.headers['Authorization'] = `Bearer ${token}`
     }
   } catch (err) {
-    // store may not be initialized in some contexts; ignore
+    
   }
   return config
 }, (err) => Promise.reject(err))

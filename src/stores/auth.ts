@@ -55,7 +55,7 @@ export const useAuthStore = defineStore("auth", {
       localStorage.removeItem("user");
     },
 
-    // Optional: load token from storage at app start
+    
     loadFromStorage() {
       const t = localStorage.getItem("token");
       const u = localStorage.getItem("user");

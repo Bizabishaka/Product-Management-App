@@ -11,7 +11,7 @@ export const useProductStore = defineStore('products', () => {
     isLoading.value = true
     error.value = null
     try {
-      // search fallback
+      
       if (q?.search) {
         const res = await api.get(`/products/search`, { params: { q: q.search, limit: q.limit ?? 100 } })
         products.value = res.data.products
@@ -41,7 +41,7 @@ export const useProductStore = defineStore('products', () => {
     isLoading.value = true
     try {
       const res = await api.post('/products/add', payload)
-      // DummyJSON returns created product
+      
       products.value.unshift(res.data)
       return res.data
     } finally {

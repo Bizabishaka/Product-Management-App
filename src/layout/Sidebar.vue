@@ -5,7 +5,7 @@
       mobileSidebarClass
     ]"
   >
-    <!-- Logo & Navigation -->
+    
     <div>
       <div class="p-6 font-bold text-xl">PlatformLogo</div>
       <nav class="mt-4">
@@ -24,7 +24,7 @@
       </nav>
     </div>
 
-    <!-- Bottom links -->
+   
     <div class="mb-4">
       <RouterLink to="/settings" class="flex items-center gap-3 p-4 hover:bg-gray-100 rounded">
         <Cog6ToothIcon class="w-5 h-5 text-gray-600" /> Settings
@@ -58,7 +58,7 @@ const emit = defineEmits(['close'])
 const router = useRouter()
 const auth = useAuthStore()
 
-// Show sidebar on desktop, toggle only on mobile
+
 const mobileSidebarClass = computed(() => {
   return window.innerWidth >= 640 ? 'translate-x-0' : (props.isOpen ? 'translate-x-0' : '-translate-x-full')
 })

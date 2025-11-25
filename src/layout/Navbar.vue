@@ -1,7 +1,7 @@
 <template>
   <header class="bg-white shadow px-4 sm:px-6 py-4 flex items-center justify-between">
 
-    <!-- LEFT: Hamburger + Logo -->
+    
     <div class="flex items-center gap-4">
       <button @click="$emit('toggle-sidebar')" class="sm:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24"
@@ -12,7 +12,7 @@
       <div class="font-semibold text-lg">MyLogo</div>
     </div>
 
-    <!-- CENTER: Search Input -->
+    
     <div class="flex-1 mx-4 relative hidden sm:block">
       <input
         type="text"
@@ -23,7 +23,7 @@
       <MagnifyingGlassIcon class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
     </div>
 
-    <!-- RIGHT: Notifications + Add Item -->
+    
     <div class="flex items-center gap-3">
       <div class="relative">
         <button @click="toggleNotifs" class="relative">
@@ -48,7 +48,7 @@
       </button>
     </div>
 
-    <!-- Mobile Search -->
+    
     <div v-if="showMobileSearch" class="absolute left-0 right-0 top-full bg-white p-3 shadow-md sm:hidden">
       <input type="text" v-model="keyword" placeholder="Search products..." class="w-full pl-10 pr-3 py-2 border rounded-lg outline-none" />
       <MagnifyingGlassIcon class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
