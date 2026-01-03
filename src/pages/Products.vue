@@ -145,14 +145,14 @@
 
 <script lang="ts">
 import { ref, computed, onMounted } from "vue";
-import AppLayout from "../layout/AppLayout.vue";
+
 import Spinner from "../components/Spinner.vue";
 import { useProductStore } from "../stores/products";
 import { useUIStore } from "../stores/ui";
 import { useRouter } from "vue-router";
 
 export default {
-  components: { AppLayout, Spinner },
+  
   setup() {
     const store = useProductStore();
     const ui = useUIStore();
